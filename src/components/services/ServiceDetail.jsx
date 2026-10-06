@@ -16,7 +16,7 @@ export default function ServiceDetail({ service, isReversed }) {
         <div className="rounded-2xl overflow-hidden bg-white shadow-sm border border-charcoal/8">
           <img
             src={service.image}
-            alt={`${service.title} - Nice Cleaning`}
+            alt={`${service.title} - Pretty Clean`}
             className="w-full h-[320px] sm:h-[400px] bg-white object-contain"
             loading="lazy"
           />

@@ -12,7 +12,7 @@ export default function ServiceCTA() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="bg-white rounded-3xl border border-charcoal/8 p-8 sm:p-12 lg:p-16 text-center max-w-4xl mx-auto shadow-sm">
           <span className="text-xs font-semibold tracking-widest uppercase text-brand-purple font-sans mb-3 block">
-            Nice Cleaning
+            Pretty Clean
           </span>
           <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-medium text-charcoal mb-4">
             Ready to Make Your Space Shine?

@@ -28,7 +28,7 @@ const accentColors = {
 };
 
 const steps = [
-  "Call or message Nice Cleaning to tell us what you need",
+  "Call or message Pretty Clean to tell us what you need",
   "Discuss your home, service and any requirements",
   "Receive a personalised quote for your needs",
   "Enjoy a fresher home with fewer chores",
@@ -37,7 +37,7 @@ const steps = [
 export default function Services() {
   return (
     <>
-      <title>Cleaning Services | Nice Cleaning</title>
+      <title>Cleaning Services | Pretty Clean</title>
       <AnnouncementBar />
       <Navbar />
       <main>
@@ -47,15 +47,15 @@ export default function Services() {
             <Breadcrumb items={[{ label: "Services" }]} />
             <div className="mt-6 max-w-2xl">
               <p className="text-xs font-semibold tracking-widest uppercase text-brand-purple mb-3 font-sans">
-                Nice Cleaning
+                Pretty Clean
               </p>
               <h1 className="font-display text-4xl sm:text-5xl font-medium text-charcoal mb-4 leading-tight">
                 Cleaning Services Designed Around You
               </h1>
               <p className="font-sans text-base sm:text-lg text-charcoal/65 leading-relaxed mb-6">
-                From house cleans to detailed deep cleans and end of tenancy
-                cleaning, Nice Cleaning provides a professional, friendly
-                service tailored to your needs.
+                From regular cleans to detailed deep cleans and end of tenancy
+                cleaning, Pretty Clean provides a professional, friendly service
+                tailored to your needs.
               </p>
               <div className="flex flex-wrap gap-3">
                 <Link to="/request-quote" className="btn-primary">
@@ -97,7 +97,7 @@ export default function Services() {
                       <div className="rounded-2xl overflow-hidden bg-white shadow-md">
                         <img
                           src={service.image}
-                          alt={`${service.title} by Nice Cleaning`}
+                          alt={`${service.title} by Pretty Clean`}
                           className="w-full h-[300px] sm:h-[380px] bg-white object-contain"
                           loading="lazy"
                         />
@@ -189,7 +189,7 @@ export default function Services() {
                 Simple Process
               </p>
               <h2 className="font-display text-3xl sm:text-4xl font-medium text-charcoal">
-                How Nice Cleaning Works
+                How Pretty Clean Works
               </h2>
             </div>
             <div className="max-w-2xl mx-auto">

@@ -25,8 +25,7 @@ const values = [
   {
     icon: MapPin,
     title: "Local & Reliable",
-    description:
-      "Proudly serving Newport, Gwent and surrounding local communities.",
+    description: "Proudly serving Swansea and surrounding local communities.",
     accent: "bg-brand-purple-light text-brand-purple",
   },
 ];
@@ -35,7 +34,7 @@ export default function WhyChooseUs() {
   return (
     <section
       className="bg-cream py-16 sm:py-20 lg:py-24"
-      aria-label="Why choose Nice Cleaning"
+      aria-label="Why choose Pretty Clean"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 lg:gap-20 items-center">
@@ -44,7 +43,7 @@ export default function WhyChooseUs() {
             <div className="rounded-2xl overflow-hidden bg-white">
               <img
                 src="/photo/Why%20Choose%20Nice%20Cleaning.png"
-                alt="Nice Cleaning service benefits: five-star cleans, DBS checked, fully insured and local"
+                alt="Pretty Clean service benefits: five-star cleans, DBS checked, fully insured and local"
                 className="w-full h-auto object-contain"
                 loading="lazy"
               />
@@ -63,10 +62,10 @@ export default function WhyChooseUs() {
           {/* Right: Content */}
           <div className="order-1 lg:order-2">
             <p className="text-xs font-semibold tracking-widest uppercase text-brand-purple mb-3 font-sans">
-              Why Nice Cleaning
+              Why Pretty Clean
             </p>
             <h2 className="font-display text-3xl sm:text-4xl font-medium text-charcoal mb-4">
-              Why Choose Nice Cleaning?
+              Why Choose Pretty Clean?
             </h2>
             <p className="font-sans text-base text-charcoal/65 leading-relaxed mb-8">
               Friendly, professional cleaning with care, quality and attention

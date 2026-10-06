@@ -1,7 +1,7 @@
 export const reviews = [];
 
 export const reviewSummary = {
-  total: 40,
+  total: 11,
   recommendPercent: 100,
   platform: "Facebook",
 };

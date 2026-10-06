@@ -17,7 +17,7 @@ export default function ServiceCard({ service }) {
       <div className="relative h-48 sm:h-52 overflow-hidden bg-white">
         <img
           src={service.image}
-          alt={`${service.title} by Nice Cleaning`}
+          alt={`${service.title} by Pretty Clean`}
           className="w-full h-full bg-white object-contain"
           loading="lazy"
         />

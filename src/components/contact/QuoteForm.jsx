@@ -80,7 +80,7 @@ export default function QuoteForm() {
 
   const waMessage = createWhatsAppUrl(
     [
-      "Hi Nice Cleaning, I'd like to request a quote.",
+      "Hi Pretty Clean, I'd like to request a quote.",
       `Name: ${fields.name}`,
       `Phone: ${fields.phone}`,
       fields.email && `Email: ${fields.email}`,
@@ -107,7 +107,7 @@ export default function QuoteForm() {
         <p className="font-sans text-base text-charcoal/70 leading-relaxed mb-2 max-w-md mx-auto">
           Thank you, <strong>{fields.name}</strong>! This demo form has not sent
           your details automatically. Continue to WhatsApp to send your enquiry
-          to Nice Cleaning.
+          to Pretty Clean.
         </p>
         <p className="font-sans text-sm text-charcoal/50 mb-8">
           You selected:{" "}
@@ -370,7 +370,7 @@ export default function QuoteForm() {
             value={fields.message}
             onChange={handleChange}
             rows={4}
-            placeholder="Please share your cleaning requirements or any questions for Nice Cleaning..."
+            placeholder="Please share your cleaning requirements or any questions for Pretty Clean..."
             className="input-field resize-none"
           />
         </div>

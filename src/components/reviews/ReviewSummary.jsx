@@ -18,7 +18,7 @@ export default function ReviewSummary() {
             </span>
           </div>
           <p className="font-sans text-sm text-charcoal/65 mt-0.5">
-            Nice Cleaning is rated {reviewSummary.recommendPercent}% recommended
+            Pretty Clean is rated {reviewSummary.recommendPercent}% recommended
             on Facebook, based on {reviewSummary.total} reviews.
           </p>
         </div>

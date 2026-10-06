@@ -16,29 +16,37 @@ const quickLinks = [
   { to: "/our-work", label: "Our Work" },
   { to: "/gallery", label: "Gallery" },
   { to: "/areas", label: "Areas We Cover" },
+  { to: "/faq", label: "FAQ" },
   { to: "/request-quote", label: "Request a Quote" },
 ];
 
 const serviceLinks = [
-  { to: "/services#house-cleans", label: "House Cleans" },
-  { to: "/services#deep-cleans", label: "Deep Cleans" },
-  { to: "/services#end-of-tenancy-cleans", label: "End of Tenancy Cleans" },
+  { to: "/services#regular-cleaning", label: "Regular Cleaning" },
+  { to: "/services#deep-cleaning", label: "Deep Cleaning" },
+  { to: "/services#monthly-deep-clean", label: "Monthly Deep Clean" },
+  { to: "/services#airbnb-changeovers", label: "Airbnb Changeovers" },
+  { to: "/services#end-of-tenancy-cleaning", label: "End of Tenancy Cleaning" },
+  { to: "/services#commercial-cleaning", label: "Commercial Cleaning" },
+  { to: "/services#cleaning-extras", label: "Cleaning Extras" },
 ];
 
-const areas = ["Newport", "Bassaleg", "Langstone", "Risca", "Rogerstone"];
+const areas = [
+  "Swansea SA1",
+  "Swansea SA2",
+  "Swansea SA3",
+  "Surrounding Areas",
+];
 
 export default function Footer() {
   return (
     <footer className="bg-[#F7F3EC] text-black" role="contentinfo">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Main footer */}
         <div className="py-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8">
-          {/* Brand */}
           <div className="sm:col-span-2 lg:col-span-1">
             <Logo size="md" />
             <p className="mt-4 text-sm text-black/70 leading-relaxed font-sans max-w-xs">
-              Friendly, professional cleaning across Newport, Gwent and
-              surrounding areas. Less Chores. More Life.
+              Friendly, professional cleaning across Swansea and surrounding
+              areas.
             </p>
             <div className="mt-5 flex items-center gap-1.5 text-sm text-black/70">
               <MapPin size={14} className="text-brand-purple flex-shrink-0" />
@@ -53,13 +61,12 @@ export default function Footer() {
                 {businessPhone}
               </a>
             </div>
-            {/* Social */}
             <div className="mt-5">
               <a
                 href={facebookPageUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Nice Cleaning on Facebook"
+                aria-label="Pretty Clean on Facebook"
                 className="inline-flex items-center gap-2 text-sm text-black/70 hover:text-black transition-colors duration-150"
               >
                 <Facebook size={16} className="text-[#4267B2]" />
@@ -68,7 +75,6 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Quick Links */}
           <div>
             <h3 className="font-sans font-semibold text-sm uppercase tracking-wider text-black/60 mb-4">
               Quick Links
@@ -87,7 +93,6 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Services */}
           <div>
             <h3 className="font-sans font-semibold text-sm uppercase tracking-wider text-black/60 mb-4">
               Services
@@ -106,7 +111,6 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Areas & Contact */}
           <div>
             <h3 className="font-sans font-semibold text-sm uppercase tracking-wider text-black/60 mb-4">
               Areas We Cover
@@ -152,10 +156,9 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Bottom bar */}
         <div className="py-5 border-t border-black/10 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-black/60 font-sans">
-          <p>© 2026 Nice Cleaning. All rights reserved.</p>
-          <p>Less Chores. More Life.</p>
+          <p>© 2026 Pretty Clean. All rights reserved.</p>
+          <p>Making life a little cleaner, one home at a time.</p>
         </div>
       </div>
     </footer>

@@ -13,7 +13,7 @@ import { createWhatsAppUrl } from "../data/contact";
 export default function OurWork() {
   return (
     <>
-      <title>Our Work | Before & After | Nice Cleaning</title>
+      <title>Our Work | Before & After | Pretty Clean</title>
       <AnnouncementBar />
       <Navbar />
       <main>
@@ -39,7 +39,7 @@ export default function OurWork() {
                 </Link>
                 <a
                   href={createWhatsAppUrl(
-                    "Hi Nice Cleaning, I've seen your before and after work and would like to enquire.",
+                    "Hi Pretty Clean, I've seen your before and after work and would like to enquire.",
                   )}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -81,7 +81,7 @@ export default function OurWork() {
               Every Detail Matters
             </h2>
             <p className="font-sans text-base sm:text-lg text-charcoal/65 leading-relaxed max-w-2xl mx-auto">
-              Nice Cleaning focuses on a careful, professional clean that helps
+              Pretty Clean focuses on a careful, professional clean that helps
               your space feel fresh and ready to enjoy.
             </p>
           </div>
@@ -97,7 +97,7 @@ export default function OurWork() {
               Ready to Make Your Space Shine?
             </h2>
             <p className="font-sans text-base sm:text-lg text-charcoal/65 leading-relaxed max-w-xl mx-auto mb-8">
-              Tell Nice Cleaning what you need and get in touch today.
+              Tell Pretty Clean what you need and get in touch today.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <Link to="/request-quote" className="btn-primary">
@@ -105,7 +105,7 @@ export default function OurWork() {
               </Link>
               <a
                 href={createWhatsAppUrl(
-                  "Hi Nice Cleaning, I'd like to enquire about a clean.",
+                  "Hi Pretty Clean, I'd like to enquire about a clean.",
                 )}
                 target="_blank"
                 rel="noopener noreferrer"

@@ -15,7 +15,7 @@ export default function ContactCard() {
         Direct Contact Info
       </h3>
       <p className="font-sans text-sm text-charcoal/65 leading-relaxed">
-        Call or message Nice Cleaning to discuss your home cleaning needs, or
+        Call or message Pretty Clean to discuss your home cleaning needs, or
         find us on Facebook.
       </p>
 
@@ -61,7 +61,7 @@ export default function ContactCard() {
       </div>
 
       <div className="pt-4 border-t border-charcoal/6 text-xs text-charcoal/50 font-sans leading-relaxed">
-        Serving Newport, Gwent and surrounding areas.
+        Serving Swansea and surrounding areas.
       </div>
     </section>
   );

@@ -23,7 +23,7 @@ export default function FAQPreview() {
             <SectionHeading
               eyebrow="Help & Information"
               heading="Common Questions Answered"
-              subheading="Clear answers about Nice Cleaning’s services, coverage and bookings."
+              subheading="Clear answers about Pretty Clean’s services, coverage and bookings."
             />
           </div>
 
@@ -85,7 +85,7 @@ export default function FAQPreview() {
               </Link>
               <a
                 href={createWhatsAppUrl(
-                  "Hi Nice Cleaning, I've got a question about your cleaning services.",
+                  "Hi Pretty Clean, I've got a question about your cleaning services.",
                 )}
                 target="_blank"
                 rel="noopener noreferrer"

@@ -12,7 +12,7 @@ import { areas } from "../data/areas";
 export default function RequestQuote() {
   return (
     <>
-      <title>Request a Quote | Nice Cleaning</title>
+      <title>Request a Quote | Pretty Clean</title>
       <AnnouncementBar />
       <Navbar />
       <main>
@@ -28,7 +28,7 @@ export default function RequestQuote() {
                 Request a Cleaning Quote
               </h1>
               <p className="font-sans text-base sm:text-lg text-charcoal/65 leading-relaxed">
-                Tell Nice Cleaning what you need and we’ll get back to discuss
+                Tell Pretty Clean what you need and we’ll get back to discuss
                 your requirements.
               </p>
             </div>
@@ -47,7 +47,7 @@ export default function RequestQuote() {
                 {/* Why Choose Us Card */}
                 <div className="bg-white rounded-2xl border border-charcoal/8 p-6 space-y-4 shadow-sm">
                   <h3 className="font-display font-medium text-lg text-charcoal mb-2">
-                    Why Choose Nice Cleaning?
+                    Why Choose Pretty Clean?
                   </h3>
 
                   <div className="flex items-start gap-3">
@@ -103,7 +103,7 @@ export default function RequestQuote() {
                   <div className="flex items-center gap-2 mb-3">
                     <MapPin size={18} className="text-brand-purple" />
                     <h3 className="font-display font-medium text-base text-charcoal">
-                      Serving Newport & Nearby
+                      Serving Swansea & Nearby
                     </h3>
                   </div>
                   <div className="flex flex-wrap gap-1.5">

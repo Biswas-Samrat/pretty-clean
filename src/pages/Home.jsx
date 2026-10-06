@@ -18,7 +18,7 @@ import CTASection from "../components/common/CTASection";
 export default function Home() {
   return (
     <>
-      <title>Nice Cleaning | House Cleaning in Newport, Gwent</title>
+      <title>Pretty Clean | House Cleaning in Swansea</title>
       <AnnouncementBar />
       <Navbar />
       <main id="main-content">
@@ -34,7 +34,7 @@ export default function Home() {
         <FAQPreview />
         <CTASection
           heading="Ready to Make Your Space Shine?"
-          subheading="House Cleans, Deep Cleans and End of Tenancy Cleans across Newport, Gwent and surrounding areas."
+          subheading="Regular cleaning, deep cleaning and end of tenancy services across Swansea and surrounding areas."
         />
       </main>
       <Footer />

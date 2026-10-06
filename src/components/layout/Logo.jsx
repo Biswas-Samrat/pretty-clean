@@ -10,15 +10,17 @@ export default function Logo({ size = "md", light = false }) {
     <div
       className={`flex items-center gap-2.5 ${light ? "text-white" : "text-dark"}`}
     >
-      <div className="flex h-10 w-10 items-center justify-center rounded-full border-2 border-brand-purple/40 bg-white text-brand-purple shadow-sm">
-        <span className="font-script text-2xl leading-none">N</span>
+      <div className="flex h-10 w-10 items-center justify-center rounded-full border-2 border-brand-purple/40 bg-brand-purple-light text-brand-purple shadow-sm">
+        <span className="font-script text-2xl leading-none text-charcoal">
+          P
+        </span>
       </div>
       <div className="flex flex-col leading-none">
-        <span className="font-script text-2xl sm:text-3xl leading-none">
-          Nice
+        <span className="font-sans text-lg sm:text-xl font-semibold tracking-[0.12em] uppercase leading-none text-current">
+          Pretty
         </span>
-        <span className="font-sans text-[10px] font-semibold tracking-[0.28em] uppercase text-current/80">
-          Cleaning
+        <span className="font-display text-base sm:text-xl font-medium leading-none text-current">
+          Clean
         </span>
       </div>
     </div>

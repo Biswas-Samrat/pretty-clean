@@ -3,18 +3,18 @@
 @tailwind utilities;
 
 :root {
-  --brand-purple: #5A2A91;
-  --brand-purple-light: #F3EAF9;
-  --brand-purple-dark: #35205F;
-  --brand-teal: #20B7B0;
-  --brand-teal-light: #DDF6F4;
-  --brand-coral: #E85A7A;
-  --brand-yellow: #F4C542;
-  --cream: #FFF9F4;
-  --dark: #1E1A2B;
+  --brand-purple: #C9A227;
+  --brand-purple-light: #F4E5B2;
+  --brand-purple-dark: #9C7616;
+  --brand-teal: #E7C968;
+  --brand-teal-light: #F6F1D8;
+  --brand-coral: #C9A227;
+  --brand-yellow: #E7C968;
+  --cream: #F6F6F4;
+  --dark: #151515;
   --white: #FFFFFF;
-  --soft-border: #E9DDEB;
-  --muted: #625D68;
+  --soft-border: #E8E1D2;
+  --muted: #5F5F5F;
 }
 
 @layer base {
@@ -28,7 +28,7 @@
 
   body {
     @apply font-sans text-dark bg-white antialiased;
-    background-image: linear-gradient(180deg, #fff 0%, #fff9f4 100%);
+    background-image: linear-gradient(180deg, #fff 0%, #f6f6f4 100%);
     overflow-x: hidden;
   }
 
@@ -48,11 +48,11 @@
 
 @layer components {
   .btn-primary {
-    @apply inline-flex items-center justify-center gap-2 px-6 py-3 bg-brand-purple text-white font-sans font-medium text-sm rounded-full transition-all duration-200 hover:bg-brand-purple-dark hover:shadow-soft active:scale-95 focus:outline-none focus:ring-2 focus:ring-brand-purple/40 focus:ring-offset-2;
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 bg-brand-purple text-charcoal font-sans font-medium text-sm rounded-full transition-all duration-200 hover:bg-brand-purple-dark hover:text-white hover:shadow-soft active:scale-95 focus:outline-none focus:ring-2 focus:ring-brand-purple/40 focus:ring-offset-2;
   }
 
   .btn-secondary {
-    @apply inline-flex items-center justify-center gap-2 px-6 py-3 bg-white border border-brand-purple/25 text-dark font-sans font-medium text-sm rounded-full transition-all duration-200 hover:border-brand-purple hover:bg-brand-purple-light active:scale-95 focus:outline-none focus:ring-2 focus:ring-brand-purple/20 focus:ring-offset-2;
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 bg-white border border-charcoal/20 text-dark font-sans font-medium text-sm rounded-full transition-all duration-200 hover:border-brand-purple hover:bg-brand-purple-light active:scale-95 focus:outline-none focus:ring-2 focus:ring-brand-purple/20 focus:ring-offset-2;
   }
 
   .btn-outline {
@@ -92,7 +92,7 @@
   }
 
   .trust-badge {
-    @apply inline-flex items-center gap-2 rounded-full border border-brand-purple/20 bg-brand-purple-light px-3.5 py-1.5 text-[11px] font-sans font-semibold uppercase tracking-[0.2em] text-brand-purple;
+    @apply inline-flex items-center gap-2 rounded-full border border-brand-purple/20 bg-brand-purple-light px-3.5 py-1.5 text-[11px] font-sans font-semibold uppercase tracking-[0.2em] text-charcoal;
   }
 }
 
@@ -110,10 +110,10 @@
   top: var(--bubble-y);
   width: var(--bubble-size);
   height: var(--bubble-size);
-  border: 1px solid #000;
+  border: 1px solid rgba(21, 21, 21, 0.18);
   border-radius: 50%;
   background-color: var(--bubble-color);
-  box-shadow: inset -2px -3px 5px rgba(23, 23, 23, 0.14), 0 2px 8px rgba(23, 23, 23, 0.14);
+  box-shadow: inset -2px -3px 5px rgba(23, 23, 23, 0.14), 0 2px 8px rgba(23, 23, 23, 0.12);
   animation: hero-bubble-float var(--bubble-duration) ease-in-out var(--bubble-delay) infinite;
 }
 
@@ -145,11 +145,11 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #f3eaf9;
+  background: #f6f6f4;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #5A2A91 0%, #20B7B0 100%);
+  background: linear-gradient(180deg, #C9A227 0%, #E7C968 100%);
   border-radius: 999px;
 }
 

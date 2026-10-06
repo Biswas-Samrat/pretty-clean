@@ -16,6 +16,7 @@ const navLinks = [
   { to: "/our-work", label: "Our Work" },
   { to: "/gallery", label: "Gallery" },
   { to: "/areas", label: "Areas We Cover" },
+  { to: "/faq", label: "FAQ" },
 ];
 
 export default function Navbar() {
@@ -26,20 +27,18 @@ export default function Navbar() {
   return (
     <>
       <header
-        className={`sticky top-0 z-30 transition-all duration-300 ${
+        className={`sticky top-0 z-30 transform-gpu transition-colors duration-300 ${
           isScrolled
-            ? "bg-cream/95 backdrop-blur-sm shadow-sm border-b border-charcoal/8"
+            ? "bg-cream/95 shadow-sm border-b border-charcoal/8"
             : "bg-cream"
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16 lg:h-18">
-            {/* Logo */}
-            <Link to="/" aria-label="Nice Cleaning - Home">
+            <Link to="/" aria-label="Pretty Clean - Home">
               <Logo size="md" />
             </Link>
 
-            {/* Desktop Nav */}
             <nav
               className="hidden lg:flex items-center gap-0.5"
               aria-label="Main navigation"
@@ -52,7 +51,7 @@ export default function Navbar() {
                     to={link.to}
                     className={`px-3.5 py-2 rounded-lg font-sans font-medium text-sm transition-colors duration-150 ${
                       isActive
-                        ? "text-brand-purple bg-brand-teal-light"
+                        ? "text-charcoal bg-brand-purple-light"
                         : "text-charcoal/70 hover:text-charcoal hover:bg-charcoal/5"
                     }`}
                   >
@@ -62,12 +61,11 @@ export default function Navbar() {
               })}
             </nav>
 
-            {/* Desktop CTAs */}
             <div className="hidden lg:flex items-center gap-3">
               <a
                 href={businessPhoneLink}
                 className="flex items-center gap-1.5 text-sm text-charcoal/60 hover:text-charcoal font-medium transition-colors duration-150 px-2"
-                aria-label="Call Nice Cleaning"
+                aria-label="Call Pretty Clean"
               >
                 <Phone size={15} />
                 <span className="hidden xl:inline">{businessPhone}</span>
@@ -77,7 +75,7 @@ export default function Navbar() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-whatsapp py-2 px-4 text-xs"
-                aria-label="WhatsApp Nice Cleaning"
+                aria-label="WhatsApp Pretty Clean"
               >
                 <svg
                   viewBox="0 0 24 24"
@@ -97,7 +95,6 @@ export default function Navbar() {
               </Link>
             </div>
 
-            {/* Mobile menu button */}
             <button
               onClick={toggle}
               aria-label={

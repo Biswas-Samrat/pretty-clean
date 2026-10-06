@@ -3,18 +3,18 @@ import { ArrowRight } from "lucide-react";
 import { createWhatsAppUrl } from "../../data/contact";
 
 const heroBubbles = [
-  { x: 6, y: 8, size: 12, color: "#FDE203", delay: -1.2, duration: 8.5 },
-  { x: 21, y: 51, size: 9, color: "#FB3762", delay: -4.1, duration: 9.5 },
-  { x: 36, y: 7, size: 18, color: "#05ECDA", delay: -2.7, duration: 11 },
-  { x: 50, y: 57, size: 11, color: "#927FF9", delay: -6.3, duration: 10 },
-  { x: 65, y: 9, size: 14, color: "#FDE203", delay: -3.5, duration: 12 },
-  { x: 80, y: 49, size: 10, color: "#FB3762", delay: -7.4, duration: 9 },
-  { x: 94, y: 6, size: 17, color: "#05ECDA", delay: -5.2, duration: 11.5 },
-  { x: 12, y: 55, size: 11, color: "#927FF9", delay: -2.1, duration: 10.5 },
-  { x: 29, y: 27, size: 14, color: "#FDE203", delay: -8.2, duration: 12.5 },
-  { x: 46, y: 59, size: 9, color: "#FB3762", delay: -3.9, duration: 8 },
-  { x: 67, y: 27, size: 13, color: "#05ECDA", delay: -6.8, duration: 10.5 },
-  { x: 87, y: 52, size: 10, color: "#927FF9", delay: -1.7, duration: 11 },
+  { x: 6, y: 8, size: 12, color: "#FF6B57", delay: -1.2, duration: 8.5 },
+  { x: 21, y: 51, size: 9, color: "#FFB703", delay: -4.1, duration: 9.5 },
+  { x: 36, y: 7, size: 18, color: "#7C3AED", delay: -2.7, duration: 11 },
+  { x: 50, y: 57, size: 11, color: "#00D1B2", delay: -6.3, duration: 10 },
+  { x: 65, y: 9, size: 14, color: "#FF7F50", delay: -3.5, duration: 12 },
+  { x: 80, y: 49, size: 10, color: "#3B82F6", delay: -7.4, duration: 9 },
+  { x: 94, y: 6, size: 17, color: "#F472B6", delay: -5.2, duration: 11.5 },
+  { x: 12, y: 55, size: 11, color: "#22C55E", delay: -2.1, duration: 10.5 },
+  { x: 29, y: 27, size: 14, color: "#FFB703", delay: -8.2, duration: 12.5 },
+  { x: 46, y: 59, size: 9, color: "#F43F5E", delay: -3.9, duration: 8 },
+  { x: 67, y: 27, size: 13, color: "#06B6D4", delay: -6.8, duration: 10.5 },
+  { x: 87, y: 52, size: 10, color: "#A78BFA", delay: -1.7, duration: 11 },
 ];
 
 export default function HeroSection() {
@@ -25,7 +25,6 @@ export default function HeroSection() {
     >
       <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 xl:px-18">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 lg:gap-8 items-center">
-          {/* Mobile Order 1 / Desktop Order 2: Hero Photo FIRST on Mobile */}
           <div className="order-1 lg:order-2 lg:col-span-6 flex justify-center lg:justify-end">
             <div className="w-full max-w-xs sm:max-w-md lg:max-w-md xl:max-w-lg">
               <div className="hero-bubble-field" aria-hidden="true">
@@ -46,16 +45,14 @@ export default function HeroSection() {
               </div>
               <img
                 src="/new%20hero%20photo.png"
-                alt="Nice Cleaning home cleaning service"
+                alt="Pretty Clean home cleaning service"
                 className="w-full h-auto lg:max-h-[380px] object-contain"
               />
             </div>
           </div>
 
-          {/* Mobile Order 2 / Desktop Order 1: Text & Actions SECOND on Mobile */}
           <div className="order-2 lg:order-1 lg:col-span-6 space-y-3.5 sm:space-y-4 lg:space-y-4 text-center lg:text-left">
-            {/* Top Pill / Badge */}
-            <div className="inline-flex items-center gap-2 bg-brand-yellow/20 border border-brand-yellow/50 px-3.5 py-1 rounded-full text-xs sm:text-sm font-sans text-charcoal/80 shadow-xs mx-auto lg:mx-0">
+            <div className="inline-flex items-center gap-2 bg-brand-purple/20 border border-brand-purple/40 px-3.5 py-1 rounded-full text-xs sm:text-sm font-sans text-charcoal/80 shadow-xs mx-auto lg:mx-0">
               <svg
                 className="w-3.5 h-3.5 text-charcoal"
                 viewBox="0 0 24 24"
@@ -64,23 +61,20 @@ export default function HeroSection() {
                 <path d="M12 2L14.5 9.5L22 12L14.5 14.5L12 22L9.5 14.5L2 12L9.5 9.5L12 2Z" />
               </svg>
 
-              <span>5 Star Cleans • DBS Checked • Fully Insured</span>
+              <span>100% Recommended • DBS Checked • Fully Insured</span>
             </div>
 
-            {/* Headline */}
             <h1 className="font-sans font-bold text-3xl sm:text-4xl lg:text-[2.6rem] xl:text-[3rem] text-charcoal leading-[1.12] tracking-tight max-sm:mb-2">
-              Less Chores. <br className="hidden sm:inline" />
-              More Life. <br className="hidden sm:inline" />
+              Making Life a Little <br className="hidden sm:inline" />
+              Cleaner <br className="hidden sm:inline" />
               <span className="relative inline-block font-script font-normal text-4xl sm:text-5xl lg:text-5xl xl:text-6xl text-charcoal mt-0.5">
-                Nice Cleaning
-                {/* Floating sparkles */}
+                Pretty Clean
                 <span className="absolute -top-2 -right-5 text-charcoal/70 text-base sm:text-lg select-none">
                   ✦
                 </span>
                 <span className="absolute -bottom-1 -right-8 text-charcoal/50 text-xs sm:text-sm select-none">
                   ✦
                 </span>
-                {/* Curved underline */}
                 <svg
                   className="absolute -bottom-2 left-0 w-full h-2.5 text-charcoal/80"
                   viewBox="0 0 200 12"
@@ -97,14 +91,12 @@ export default function HeroSection() {
               </span>
             </h1>
 
-            {/* Subheading */}
             <p className="font-sans text-sm sm:text-base text-charcoal/70 leading-relaxed max-w-lg mx-auto lg:mx-0">
-              Professional house cleaning across Newport, Gwent and surrounding
-              areas. Nice Cleaning helps you enjoy a cleaner home without the
-              stress of doing it all yourself.
+              Professional domestic and commercial cleaning across Swansea and
+              surrounding areas. Pretty Clean takes care of the details so you
+              can enjoy a fresher home with less stress.
             </p>
 
-            {/* Action Buttons */}
             <div
               className="
                 flex flex-col items-center justify-center
@@ -113,9 +105,7 @@ export default function HeroSection() {
                 lg:justify-start
               "
             >
-              {/* Request Service + WhatsApp */}
               <div className="flex items-center gap-2.5">
-                {/* WhatsApp Button - Hidden on Mobile */}
                 <a
                   href={createWhatsAppUrl()}
                   target="_blank"
@@ -132,13 +122,12 @@ export default function HeroSection() {
                   </svg>
                 </a>
 
-                {/* Request Service */}
                 <Link
                   to="/request-quote"
                   className="
                     inline-flex items-center gap-2.5
                     bg-brand-purple hover:bg-brand-purple-dark
-                    text-white
+                    text-charcoal
                     rounded-full
                     px-5 sm:px-6 py-2.5
                     text-xs sm:text-sm
@@ -157,7 +146,6 @@ export default function HeroSection() {
                 </Link>
               </div>
 
-              {/* Discover More */}
               <Link
                 to="/services"
                 className="

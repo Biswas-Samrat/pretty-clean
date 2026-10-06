@@ -1,32 +1,27 @@
 export const areas = [
   {
-    id: "newport",
-    name: "Newport",
-    description: "Local home cleaning across Newport, Gwent.",
+    id: "swansea-sa1",
+    name: "Swansea SA1",
+    description: "Local home and commercial cleaning across Swansea SA1.",
     isMain: true,
   },
   {
-    id: "bassaleg",
-    name: "Bassaleg",
-    description: "Friendly home cleaning in Bassaleg.",
+    id: "swansea-sa2",
+    name: "Swansea SA2",
+    description:
+      "Professional cleaning for homes and businesses in Swansea SA2.",
     isMain: false,
   },
   {
-    id: "langstone",
-    name: "Langstone",
-    description: "Professional home cleaning in Langstone.",
+    id: "swansea-sa3",
+    name: "Swansea SA3",
+    description: "Friendly domestic and commercial cleaning in Swansea SA3.",
     isMain: false,
   },
   {
-    id: "risca",
-    name: "Risca",
-    description: "Reliable local home cleaning in Risca.",
-    isMain: false,
-  },
-  {
-    id: "rogerstone",
-    name: "Rogerstone",
-    description: "Nice Cleaning serves homes in Rogerstone.",
+    id: "surrounding-areas",
+    name: "Surrounding Areas",
+    description: "Serving Swansea and nearby local communities.",
     isMain: false,
   },
 ];

@@ -10,7 +10,7 @@ import GalleryGrid from "../components/gallery/GalleryGrid";
 export default function Gallery() {
   return (
     <>
-      <title>Gallery | Nice Cleaning</title>
+      <title>Gallery | Pretty Clean</title>
       <AnnouncementBar />
       <Navbar />
       <main>

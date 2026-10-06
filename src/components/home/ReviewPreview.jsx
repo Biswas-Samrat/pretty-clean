@@ -16,7 +16,7 @@ export default function ReviewPreview() {
             <SectionHeading
               eyebrow="Facebook Reviews"
               heading="100% Recommended"
-              subheading={`Nice Cleaning is rated 100% recommended on Facebook, based on ${reviewSummary.total} reviews.`}
+              subheading={`Pretty Clean is rated 100% recommended on Facebook, based on ${reviewSummary.total} reviews.`}
               align="left"
             />
           </div>

@@ -13,7 +13,7 @@ import { createWhatsAppUrl } from "../data/contact";
 export default function Areas() {
   return (
     <>
-      <title>Areas We Cover | Nice Cleaning</title>
+      <title>Areas We Cover | Pretty Clean</title>
       <AnnouncementBar />
       <Navbar />
       <main>
@@ -29,8 +29,8 @@ export default function Areas() {
                 Serving Newport & Surrounding Areas
               </h1>
               <p className="font-sans text-base sm:text-lg text-charcoal/65 leading-relaxed mb-6">
-                Nice Cleaning provides professional home cleaning across
-                Newport, Gwent and nearby local communities.
+                Pretty Clean provides professional home cleaning across Swansea
+                and nearby local communities.
               </p>
               <div className="flex flex-wrap gap-3">
                 <Link to="/request-quote" className="btn-primary">
@@ -38,7 +38,7 @@ export default function Areas() {
                 </Link>
                 <a
                   href={createWhatsAppUrl(
-                    "Hi Nice Cleaning, I'd like to check if you cover my area.",
+                    "Hi Pretty Clean, I'd like to check if you cover my area.",
                   )}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -87,7 +87,7 @@ export default function Areas() {
                 </Link>
                 <a
                   href={createWhatsAppUrl(
-                    "Hi Nice Cleaning, I'd like to check availability for my postcode.",
+                    "Hi Pretty Clean, I'd like to check availability for my postcode.",
                   )}
                   target="_blank"
                   rel="noopener noreferrer"

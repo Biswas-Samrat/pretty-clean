@@ -16,10 +16,10 @@ export default function ServiceAreasPreview() {
               Service Areas
             </p>
             <h2 className="font-display text-3xl sm:text-4xl font-medium text-charcoal mb-4">
-              Serving Newport, Gwent & Surrounding Areas
+              Serving Swansea & Surrounding Areas
             </h2>
             <p className="font-sans text-base text-charcoal/65 leading-relaxed mb-8">
-              Nice Cleaning provides professional home cleaning across Newport
+              Pretty Clean provides professional home cleaning across Swansea
               and nearby local communities. Get in touch to check availability.
             </p>
             <Link to="/areas" className="btn-primary">

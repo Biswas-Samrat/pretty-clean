@@ -4,7 +4,7 @@ const steps = [
   {
     icon: PhoneCall,
     title: "1. Get In Touch",
-    description: "Call or message Nice Cleaning to tell us what you need.",
+    description: "Call or message Pretty Clean to tell us what you need.",
   },
   {
     icon: CalendarCheck,

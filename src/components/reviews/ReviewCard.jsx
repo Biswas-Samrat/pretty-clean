@@ -39,7 +39,7 @@ export default function ReviewCard({ review }) {
             aria-hidden="true"
           />
           <span className="text-xs font-semibold text-brand-teal font-sans">
-            Recommends Nice Cleaning
+            Recommends Pretty Clean
           </span>
         </div>
       )}
