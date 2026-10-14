@@ -28,9 +28,11 @@ export default function GalleryPreview() {
 
         <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4">
           {preview.map((item, i) => (
-            <div
+            <Link
+              to="/gallery"
               key={item.id}
-              className={`group relative overflow-hidden rounded-xl ${i === 0 ? 'sm:col-span-1 row-span-2' : ''}`}
+              className={`group relative overflow-hidden rounded-xl shadow-xs hover:shadow-md transition-shadow ${i === 0 ? 'sm:col-span-1 row-span-2' : ''}`}
+              aria-label={`View ${item.title} in gallery`}
             >
               <img
                 src={item.image}
@@ -40,11 +42,11 @@ export default function GalleryPreview() {
               />
               <div className="absolute inset-0 bg-charcoal/0 group-hover:bg-charcoal/20 transition-colors duration-300" aria-hidden="true" />
               <div className="absolute bottom-0 left-0 right-0 p-3 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                <span className="inline-block bg-white/95 text-charcoal text-xs font-semibold font-sans px-2.5 py-1 rounded-full">
+                <span className="inline-block bg-white/95 text-charcoal text-xs font-semibold font-sans px-2.5 py-1 rounded-full shadow-xs">
                   {item.category}
                 </span>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
 

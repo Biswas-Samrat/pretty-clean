@@ -61,8 +61,11 @@ export default function MobileMenu({ isOpen, onClose }) {
       >
         {/* Header */}
         <div className="flex items-center justify-between p-5 border-b border-charcoal/8">
-          <Logo size="md" />
+          <Link to="/" onClick={onClose} aria-label="Pretty Clean - Home">
+            <Logo size="md" />
+          </Link>
           <button
+            type="button"
             onClick={onClose}
             aria-label="Close navigation menu"
             className="w-9 h-9 rounded-lg flex items-center justify-center text-charcoal/60 hover:text-charcoal hover:bg-charcoal/5 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-charcoal/20"

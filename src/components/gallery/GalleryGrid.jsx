@@ -46,27 +46,27 @@ export default function GalleryGrid() {
       </div>
 
       {/* Grid */}
-      <div className="columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-4 space-y-4">
+      <div className="columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-4">
         {filtered.map((item) => (
           <button
             key={item.id}
             onClick={() => handleOpen(item)}
-            className="group block w-full rounded-xl overflow-hidden relative focus:outline-none focus:ring-2 focus:ring-brand-purple focus:ring-offset-2"
+            className="group block w-full rounded-xl overflow-hidden relative focus:outline-none focus:ring-2 focus:ring-brand-purple focus:ring-offset-2 break-inside-avoid mb-4 bg-charcoal/5 shadow-sm hover:shadow-md transition-shadow duration-300 text-left"
             aria-label={`View ${item.title}`}
           >
             <img
               src={item.image}
               alt={item.alt}
-              className="w-full object-cover transition-transform duration-500 group-hover:scale-105"
+              className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
               loading="lazy"
             />
             <div className="absolute inset-0 bg-charcoal/0 group-hover:bg-charcoal/30 transition-colors duration-300" />
-            <div className="absolute bottom-0 left-0 right-0 p-3 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-              <div className="flex items-center justify-between">
-                <span className="bg-white/95 text-charcoal text-xs font-semibold font-sans px-2.5 py-1 rounded-full">
+            <div className="absolute bottom-0 left-0 right-0 p-3 translate-y-full group-hover:translate-y-0 transition-transform duration-300 bg-gradient-to-t from-black/70 to-transparent">
+              <div className="flex items-center justify-between gap-2">
+                <span className="bg-white/95 text-charcoal text-xs font-semibold font-sans px-2.5 py-1 rounded-full shadow-xs">
                   {item.category}
                 </span>
-                <span className="bg-charcoal/80 text-white text-xs font-sans px-2 py-1 rounded-full">
+                <span className="bg-charcoal/85 text-white text-xs font-sans px-2.5 py-1 rounded-full truncate">
                   {item.title}
                 </span>
               </div>

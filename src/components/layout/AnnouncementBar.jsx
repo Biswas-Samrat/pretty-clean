@@ -3,9 +3,9 @@ import { createWhatsAppUrl } from "../../data/contact";
 
 export default function AnnouncementBar() {
   return (
-    <div className="bg-charcoal text-white py-2.5 px-4">
-      <div className="max-w-7xl mx-auto flex items-center justify-between gap-4 text-[11px] sm:text-xs md:text-sm">
-        <p className="font-sans text-white/90 tracking-[0.08em] uppercase">
+    <div id="announcement-bar" className="bg-charcoal text-white py-2.5 px-4">
+      <div className="max-w-7xl mx-auto flex items-center justify-center sm:justify-between gap-4 text-xs sm:text-xs md:text-sm">
+        <p className="font-sans text-white/90 text-center sm:text-left w-full sm:w-auto leading-relaxed">
           Making life a little cleaner, one home at a time • Swansea &
           surrounding areas
         </p>

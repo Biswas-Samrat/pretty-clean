@@ -27,10 +27,10 @@ export default function Navbar() {
   return (
     <>
       <header
-        className={`sticky top-0 z-30 transform-gpu transition-colors duration-300 ${
+        className={`sticky top-0 z-30 transform-gpu transition-all duration-500 ease-in-out ${
           isScrolled
-            ? "bg-cream/95 shadow-sm border-b border-charcoal/8"
-            : "bg-cream"
+            ? "bg-charcoal text-white shadow-md border-b border-white/10"
+            : "bg-cream text-charcoal border-b border-charcoal/8"
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -40,22 +40,37 @@ export default function Navbar() {
             </Link>
 
             <nav
-              className="hidden lg:flex items-center gap-0.5"
+              className="hidden lg:flex items-center gap-1"
               aria-label="Main navigation"
             >
               {navLinks.map((link) => {
-                const isActive = location.pathname === link.to;
+                const isActive =
+                  link.to === "/"
+                    ? location.pathname === "/"
+                    : location.pathname.startsWith(link.to);
                 return (
                   <Link
                     key={link.to}
                     to={link.to}
-                    className={`px-3.5 py-2 rounded-lg font-sans font-medium text-sm transition-colors duration-150 ${
+                    className={`relative py-2 px-3.5 font-sans font-medium text-sm transition-colors duration-200 group ${
                       isActive
-                        ? "text-charcoal bg-brand-purple-light"
-                        : "text-charcoal/70 hover:text-charcoal hover:bg-charcoal/5"
+                        ? isScrolled
+                          ? "text-white font-semibold"
+                          : "text-charcoal font-semibold"
+                        : isScrolled
+                          ? "text-white/80 hover:text-white"
+                          : "text-charcoal/70 hover:text-charcoal"
                     }`}
                   >
-                    {link.label}
+                    <span>{link.label}</span>
+                    <span
+                      className={`absolute bottom-0 left-2.5 right-2.5 h-[2.5px] rounded-full transition-all duration-300 ${
+                        isActive
+                          ? "bg-brand-purple scale-x-100 opacity-100"
+                          : "bg-brand-purple/50 scale-x-0 opacity-0 group-hover:scale-x-75 group-hover:opacity-70"
+                      }`}
+                      aria-hidden="true"
+                    />
                   </Link>
                 );
               })}
@@ -64,7 +79,11 @@ export default function Navbar() {
             <div className="hidden lg:flex items-center gap-3">
               <a
                 href={businessPhoneLink}
-                className="flex items-center gap-1.5 text-sm text-charcoal/60 hover:text-charcoal font-medium transition-colors duration-150 px-2"
+                className={`flex items-center gap-1.5 text-sm font-medium transition-colors duration-300 px-2 ${
+                  isScrolled
+                    ? "text-white/80 hover:text-white"
+                    : "text-charcoal/60 hover:text-charcoal"
+                }`}
                 aria-label="Call Pretty Clean"
               >
                 <Phone size={15} />
@@ -96,12 +115,17 @@ export default function Navbar() {
             </div>
 
             <button
+              type="button"
               onClick={toggle}
               aria-label={
                 isOpen ? "Close navigation menu" : "Open navigation menu"
               }
               aria-expanded={isOpen}
-              className="lg:hidden w-10 h-10 rounded-lg flex items-center justify-center text-charcoal hover:bg-charcoal/5 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-charcoal/20"
+              className={`lg:hidden w-10 h-10 rounded-lg flex items-center justify-center transition-colors duration-300 focus:outline-none focus:ring-2 ${
+                isScrolled
+                  ? "text-white hover:bg-white/10 focus:ring-white/20"
+                  : "text-charcoal hover:bg-charcoal/5 focus:ring-charcoal/20"
+              }`}
             >
               <Menu size={22} />
             </button>

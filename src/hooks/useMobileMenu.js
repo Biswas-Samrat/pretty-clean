@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from 'react'
+import { useState, useCallback } from 'react'
 
 export function useMobileMenu() {
   const [isOpen, setIsOpen] = useState(false)
@@ -7,13 +7,6 @@ export function useMobileMenu() {
   const close = useCallback(() => setIsOpen(false), [])
   const toggle = useCallback(() => setIsOpen(prev => !prev), [])
 
-  // Close on scroll
-  useEffect(() => {
-    if (!isOpen) return
-    const handleScroll = () => close()
-    window.addEventListener('scroll', handleScroll, { passive: true })
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [isOpen, close])
-
   return { isOpen, open, close, toggle }
 }
+
