@@ -111,9 +111,16 @@ export default function Services() {
                       >
                         {Icon && <Icon size={18} />}
                       </div>
-                      <h2 className="font-display text-3xl sm:text-[2rem] font-medium text-charcoal mb-3">
-                        {service.title}
-                      </h2>
+                      <div className="flex flex-wrap items-baseline gap-3 mb-3">
+                        <h2 className="font-display text-3xl sm:text-[2rem] font-medium text-charcoal">
+                          {service.title}
+                        </h2>
+                        {service.id === "deep-cleaning" && (
+                          <span className="font-display font-bold text-2xl sm:text-[1.75rem] text-brand-purple">
+                            {service.price}
+                          </span>
+                        )}
+                      </div>
                       <p className="font-sans text-base text-charcoal/65 leading-relaxed mb-5">
                         {service.description}
                       </p>
@@ -156,13 +163,18 @@ export default function Services() {
                         </div>
                       </div>
 
-                      {/* Personalised quote label */}
+                      {/* Price / Quote label */}
                       <div
                         className={`inline-flex items-center gap-2 px-4 py-2 rounded-lg border ${colors.border} bg-white mb-5`}
                       >
                         <span className="font-display font-semibold text-charcoal text-xl">
-                          Personalised quote
+                          {service.price || "Personalised quote"}
                         </span>
+                        {service.priceNote && (
+                          <span className="font-sans text-xs text-charcoal/60">
+                            • {service.priceNote}
+                          </span>
+                        )}
                       </div>
 
                       <div>

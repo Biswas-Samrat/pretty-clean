@@ -26,7 +26,7 @@ export default function ServiceCard({ service }) {
             className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold font-sans backdrop-blur-md bg-white/90 border ${badgeColor}`}
           >
             {Icon && <Icon size={13} />}
-            Personalised quote
+            {service.price || "Personalised quote"}
           </span>
         </div>
       </div>

@@ -82,7 +82,7 @@ export default function ServiceDetail({ service, isReversed }) {
             Request a Quote <ArrowRight size={16} />
           </Link>
           <span className="font-sans font-semibold text-charcoal text-sm bg-white px-3 py-1.5 rounded-lg border border-charcoal/10">
-            Personalised quote
+            {service.price || "Personalised quote"}
           </span>
         </div>
       </div>

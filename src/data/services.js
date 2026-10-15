@@ -57,7 +57,7 @@ export const services = [
       "Personalised service",
     ],
     accent: "teal",
-    price: "Quote based on service",
+    price: "From £195",
     priceNote: "Personalised to your home",
   },
 
@@ -83,7 +83,7 @@ export const services = [
       "Professional finish",
     ],
     accent: "coral",
-    price: "£195 / £225",
+    price: "From £195",
     priceNote: "5–6 hours • Waiting list availability",
   },
 

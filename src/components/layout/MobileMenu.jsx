@@ -11,6 +11,7 @@ const navLinks = [
   { to: "/our-work", label: "Our Work" },
   { to: "/gallery", label: "Gallery" },
   { to: "/areas", label: "Areas We Cover" },
+  { to: "/reviews", label: "Reviews" },
   { to: "/request-quote", label: "Request a Quote" },
 ];
 

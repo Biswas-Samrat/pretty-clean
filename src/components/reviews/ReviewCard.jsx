@@ -1,46 +1,83 @@
-import { Facebook } from "lucide-react";
+import { useState } from "react";
+import { Quote, User, CheckCircle } from "lucide-react";
 import RatingStars from "../common/RatingStars";
 
-export default function ReviewCard({ review }) {
+export default function ReviewCard({ review, className = "" }) {
+  const [imgError, setImgError] = useState(false);
+
+  const reviewText = review.comment || review.text;
+
   return (
-    <article className="bg-white rounded-xl border border-charcoal/8 p-6 flex flex-col h-full">
+    <article
+      className={`bg-white rounded-2xl border border-charcoal/10 p-6 flex flex-col h-full shadow-sm hover:shadow-md transition-all duration-300 ${className}`}
+    >
       {/* Header */}
-      <div className="flex items-start justify-between mb-4">
+      <div className="flex items-start justify-between gap-3 mb-4">
         <div className="flex items-center gap-3">
-          <div
-            className={`w-11 h-11 rounded-full ${review.avatarColor} flex items-center justify-center text-white font-semibold text-sm font-sans flex-shrink-0`}
-          >
-            {review.initials}
+          {/* Avatar with fallback */}
+          <div className="relative w-12 h-12 rounded-full overflow-hidden flex-shrink-0 bg-charcoal/5 border border-charcoal/10">
+            {review.avatar && !imgError ? (
+              <img
+                src={review.avatar}
+                alt={`${review.name} profile`}
+                className="w-full h-full object-cover"
+                loading="lazy"
+                onError={() => setImgError(true)}
+              />
+            ) : (
+              <div
+                className={`w-full h-full ${
+                  review.avatarColor || "bg-brand-purple"
+                } flex items-center justify-center text-white font-sans font-semibold text-sm`}
+                aria-label={review.name}
+              >
+                {review.initials || <User size={18} />}
+              </div>
+            )}
           </div>
-          <div>
-            <p className="font-sans font-semibold text-charcoal text-sm">
+
+          {/* Name & Meta */}
+          <div className="min-w-0">
+            <h3 className="font-sans font-semibold text-charcoal text-base truncate">
               {review.name}
-            </p>
-            <p className="font-sans text-xs text-charcoal/50 mt-0.5">
-              {review.service}
-            </p>
+            </h3>
+            <div className="flex items-center gap-2 text-xs text-charcoal/55 font-sans mt-0.5">
+              {review.location && <span>{review.location}</span>}
+              {review.location && review.date && <span>•</span>}
+              {review.date && <span>{review.date}</span>}
+            </div>
           </div>
         </div>
-        <div className="flex items-center gap-1.5 text-[#4267B2] flex-shrink-0">
-          <Facebook size={15} />
-        </div>
+
+        {/* Decorative Quote Icon */}
+        <Quote
+          size={20}
+          className="text-brand-purple/30 flex-shrink-0 mt-1 transform rotate-180"
+          aria-hidden="true"
+        />
       </div>
 
-      <RatingStars rating={review.rating} size={14} className="mb-3" />
+      {/* Star Rating & Service Tag */}
+      <div className="flex flex-wrap items-center justify-between gap-2 mb-3">
+        <RatingStars rating={review.rating || 5} size={15} />
 
-      <blockquote className="font-sans text-sm text-charcoal/70 leading-relaxed flex-1 italic">
-        "{review.text}"
+        {review.service && (
+          <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-[11px] font-medium font-sans bg-brand-teal-light text-brand-purple-dark border border-brand-purple/15">
+            {review.service}
+          </span>
+        )}
+      </div>
+
+      {/* Review Content */}
+      <blockquote className="font-sans text-sm text-charcoal/75 leading-relaxed flex-1 mt-1">
+        “{reviewText}”
       </blockquote>
 
-      {review.recommended && (
-        <div className="mt-5 pt-4 border-t border-charcoal/6 flex items-center gap-2">
-          <div
-            className="w-1.5 h-1.5 rounded-full bg-brand-teal"
-            aria-hidden="true"
-          />
-          <span className="text-xs font-semibold text-brand-teal font-sans">
-            Recommends Pretty Clean
-          </span>
+      {/* Recommended Tag */}
+      {review.recommended !== false && (
+        <div className="mt-5 pt-3.5 border-t border-charcoal/8 flex items-center gap-1.5 text-xs font-medium text-brand-purple-dark font-sans">
+          <CheckCircle size={13} className="text-brand-purple flex-shrink-0" />
+          <span>Verified Experience</span>
         </div>
       )}
     </article>
